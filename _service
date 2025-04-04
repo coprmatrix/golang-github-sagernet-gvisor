@@ -2,4 +2,7 @@
   <service name="go2rpm" mode="manual">
      <param name="goipath">github.com/sagernet/gvisor</param>
   </service>
+  <service name="run" mode="manual">
+     <param name="command">source main.sh</param>
+  </service>
 </services>
