@@ -1,0 +1,5 @@
+<services>
+  <service name="go2rpm" mode="manual">
+     <param name="goipath">github.com/sagernet/gvisor</param>
+  </service>
+</services>
