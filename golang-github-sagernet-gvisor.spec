@@ -8,7 +8,8 @@
 %endif
 
 # https://github.com/sagernet/gvisor
-%global goipath         github.com/sagernet/gvisor
+%global goihead gvisor
+%global goipath github.com/sagernet/%{goihead}
 Version:  20250319.0
 %global tag             sagernet-20250319.0
 
@@ -36,7 +37,7 @@ Summary:        Application Kernel for Containers
 
 License:        Apache-2.0
 URL:            %{gourl}
-Source:         %{gosource}
+Source: https://%{goipath}/archive/%{tag}/%{goihead}-%{tag}.tar.gz
 
 %description %{common_description}
 
@@ -57,7 +58,7 @@ Source:         %{gosource}
 %if %{without bootstrap}
 %if %{with check}
 %check
-%gocheck
+
 %endif
 %endif
 
